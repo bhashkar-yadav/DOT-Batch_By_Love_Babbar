@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    height: 200vh; /* To allow scrolling */
+  }
+  
+  .container {
+    position: relative;
+    margin: 40px;
+    border: 2px dashed #aaa;
+    height: 400px;
+    overflow: auto;
+  }
+  
+  .box {
+    width: 150px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    margin: 10px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .static {
+    position: static;
+    background-color: #6c757d;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .relative {
+    position: relative;
+    background-color: #007bff;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .absolute {
+    position: absolute;
+    background-color: #28a745;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .fixed {
+    position: fixed;
+    background-color: #dc3545;
+    top: 10px;
+    left: 10px;
+  }
+  
+  .sticky {
+    position: sticky;
+    background-color: #ffc107;
+    top: 0;
+  }
+  

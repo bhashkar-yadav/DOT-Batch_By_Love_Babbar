@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  h1 {
+    margin-bottom: 30px;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    perspective: 600px; /* Apply 3D perspective to all children */
+  }
+  
+  .box {
+    width: 120px;
+    height: 120px;
+    background: #007bff;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    border-radius: 10px;
+    transition: transform 0.8s ease;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+  
+  /* 3D Transforms (applied on hover for visual effect) */
+  
+  .translate-x:hover {
+    transform: translateX(100px);
+  }
+  
+  .translate-y:hover {
+    transform: translateY(100px);
+  }
+  
+  .translate-z:hover {
+    transform: translateZ(100px);
+  }
+  
+  .rotate-x:hover {
+    transform: rotateX(180deg);
+  }
+  
+  .rotate-y:hover {
+    transform: rotateY(180deg);
+  }
+  
+  .rotate-z:hover {
+    transform: rotateZ(180deg);
+  }
+  
+  .perspective-demo:hover {
+    transform: rotateY(60deg) rotateX(60deg);
+  }
+  

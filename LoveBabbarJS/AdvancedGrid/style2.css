@@ -1,0 +1,57 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  /* === Grid Container (3 columns × 2 rows) === */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(2, 100px);
+    gap: 10px;
+    height: 250px;
+    width: 500px;
+    border: 2px solid #444;
+    background-color: #f2f2f2;
+  
+    /* Grid-wide alignments */
+    justify-content: center;      /* aligns the whole grid horizontally in container */
+    align-content: center;        /* aligns the whole grid vertically in container */
+    justify-items: stretch;       /* aligns grid item contents horizontally */
+    align-items: stretch;         /* aligns grid item contents vertically */
+  
+    /* Alternatively:
+       place-content: center center;
+       place-items: stretch stretch;
+    */
+  }
+  
+  .box {
+    background-color: #b3d9ff;
+    border: 2px solid #339;
+    padding: 5px;
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  /* === Box-level alignments === */
+  .box3 {
+    place-items: end start; /* overrides container-wide place-items */
+  }
+  
+  .box4 {
+    place-self: start end; /* align-self: start; justify-self: end; */
+  }
+  
+  .box5 {
+    align-self: stretch;
+  }
+  
+  .box6 {
+    justify-self: center;
+  }
+  
