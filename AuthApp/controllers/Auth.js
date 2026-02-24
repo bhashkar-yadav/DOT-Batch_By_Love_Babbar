@@ -92,12 +92,18 @@ exports.login = async (req, res) => {
                 expires: new Date( Date.now() + 3 * 24 * 60 * 60 * 1000),
                 httpOnly:true,
             }
-            res.cookie("bhashkarcookie", token, options).status(200).json({
+            res.cookie("token", token, options).status(200).json({
                 success:true,
                 token,
                 user,
                 message:'User Logged in successfully',
             });
+            // res.status(200).json({
+            //     success:true,
+            //     token,
+            //     user,
+            //     message:'User Logged in successfully',
+            // });
         }
         else{
             return res.status(403).json({
@@ -109,7 +115,7 @@ exports.login = async (req, res) => {
     catch(error){
         console.log(error);
         return res.status(500).json({
-            succes:false,
+            success:false,
             message:'Login failure',
         })
     }
